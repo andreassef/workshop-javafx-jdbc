@@ -51,6 +51,7 @@ public class MainViewController implements Initializable{
 	public void initialize(URL uri, ResourceBundle rb) {
 	}
 	
+	//Por ser uma aplicacao multithreading adicionamos o elemento synchronized para evitar que o funcionamento seja interrompido
 	private synchronized <T> void loadView(String absoluteName, Consumer<T> initializingAction) {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
